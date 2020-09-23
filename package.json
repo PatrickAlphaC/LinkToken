@@ -22,6 +22,11 @@
   "scripts": {
     "migrate-ganache": "truffle migrate --network ganache",
     "test": "truffle test",
-    "test-ganache": "truffle test --network ganache"
+    "test-ganache": "truffle test --network ganache",
+    "migrate-kovan": "truffle migrate --network kovan",
+    "migrate-ava": "truffle migrate --network ava"
+  },
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.1.0"
   }
 }

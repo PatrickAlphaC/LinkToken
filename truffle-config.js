@@ -32,6 +32,27 @@ module.exports = {
       gasPrice: 10000000000, // 10 gwei
       skipDryRun: true,
     },
+    maticMainnet: {
+      provider: () => walletProvider(process.env.MATIC_RPC_URL),
+      network_id: 137,
+      gas: 7000000,
+      gasPrice: 1000000000, // 1 gwei
+      skipDryRun: true,
+    },
+    bscMainnet: {
+      provider: () => walletProvider('https://bsc-dataseed.binance.org/'),
+      network_id: 56,
+      gas: 7000000,
+      gasPrice: 15000000000, // 15 gwei
+      skipDryRun: true,
+    },
+    xDaiMainnet: {
+      provider: () => walletProvider('https://rpc.xdaichain.com/'),
+      network_id: 100,
+      gas: 7000000,
+      gasPrice: 1000000000, // 1 gwei
+      skipDryRun: true,
+    },
     mainnet: {
       provider: () => walletProvider(`https://mainnet.infura.io/v3/${INFURA_API_KEY}`),
       network_id: 1,
